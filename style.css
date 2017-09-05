@@ -21,8 +21,12 @@ header{
 .container .canvas{
 	margin-left:10%;
 	margin-right:10%;
-	height: 30em;
-	background: green;
+	height: 1000px;
+	background: none;
+}
+
+.container.canvas.circles{
+	color:red;
 }
 
 
