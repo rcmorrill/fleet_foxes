@@ -30,3 +30,11 @@ header{
 }
 
 
+  .axis .tick line{
+    stroke:rgb(100,100,100);
+    stroke-width:1px;
+  }
+
+  .domain{
+    fill:none;
+}

@@ -17,11 +17,29 @@ var plot = d3.select('.canvas')
 
 
 
-var scaleY = d3.scale.linear().domain([1,11]).range([1,500]);
+var scaleX = d3.scale.linear().domain([1,11]).range([25,width-25]);
+var scaleY = d3.scale.linear().domain([1,600]).range([height,0]);
+
 
 
 d3.csv('data/fleet_foxes_V1_alt.csv',parse,dataLoaded);
 
+var axisX = d3.svg.axis()
+	.orient('bottom')
+	.innerTickSize(-height)
+	.scale(scaleX);
+
+plot.append('g').attr('class','axis')
+	.attr("transform", "translate(0," + height + ")")
+	.call(axisX);
+
+var axisY = d3.svg.axis()
+	.orient('left')
+	.innerTickSize(0)
+	.scale(scaleY);
+
+plot.append('g').attr('class','axis')
+	.call(axisY);
 
 
 //PRIMARY FUNCTION
@@ -34,23 +52,24 @@ var nestedData = d3.nest()
 
 console.log(nestedData);
 
+	
 
 var plotting = plot.selectAll('.circles')
-	.data(nestedData[3].values)
+	.data(nestedData[7].values)
 	.enter()
 	//.append('text').text('fake')
 	.append('g')
 
 
 plotting.append('circle').attr('class','.circles')
-	.attr('cx', function(d) {return d.length})//function(d){return d.length})
-	.attr('cy', function(d) {return scaleY(d.track)})//function(d){return scaleYLines(d.startDate)})
-	.attr('r',function(d){return 30})
+	.attr('cy', function(d) {return scaleY(d.length)})//function(d){return d.length})
+	.attr('cx', function(d) {return scaleX(d.track)})//function(d){return scaleYLines(d.startDate)})
+	.attr('r',function(d){return 10})
 	.style('fill','rgba(45,45,45,.3)')
 
 plotting.append('text').attr('class','.labels')
-	.attr('x', function(d) {return d.length})
-	.attr('y', function(d) {return scaleY(d.track)})
+	.attr('y', function(d) {return scaleY(d.length)})
+	.attr('x', function(d) {return scaleX(d.track)})
 	.text(function(d){return d.instrument})
 
 
