@@ -14,7 +14,10 @@ var plot = d3.select('.canvas')
 	.attr('transform', 'translate ('+margin.l+','+margin.r+')');
 
 
-
+var force = d3.layout.force()
+    .size([width,height])
+    .charge(0)
+    .gravity(0);
 
 
 var scaleX = d3.scale.linear().domain([1,11]).range([25,width-25]);
@@ -55,7 +58,7 @@ console.log(nestedData);
 	
 
 var plotting = plot.selectAll('.circles')
-	.data(nestedData[7].values)
+	.data(data)
 	.enter()
 	//.append('text').text('fake')
 	.append('g')
