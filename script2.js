@@ -20,9 +20,60 @@ var force = d3.layout.force()
     .gravity(0);
 
 
-var scaleX = d3.scale.linear().domain([1,11]).range([25,width]);
-var scaleY = d3.scale.linear().domain([1,600]).range([height,0]);
+var scaleY = d3.scale.linear().domain([1,11]).range([25,height]);
+//var scaleY = d3.scale.linear().domain([1,600]).range([height,0]);
 var scaleD = d3.scale.linear().domain([1,0]).range([100,400]);
+
+var scaleX = d3.scale.linear().domain([10,200]).range([0,width]);
+//need to make something better than this at some point
+
+scaleXC = d3. scale.ordinal()
+.domain([
+
+		"Andy Clausen",
+		"Brian Mcpherson",
+		"Casey Wescott",
+		"Christian Wargo",
+		"Christopher Icasiano",
+		"Dave Eggar",
+		"Hannah Epperson",
+		"Jeremy Kittel",
+		"Matthew Barrick",
+		"Morgan Henderson",
+		"Mulatu Astatke",
+		"Neal Morgan",
+		"Nicholas Cords",
+		"Pheonix Forte Choir",
+		"Riley Mulherkar",
+		"Robin Pecknold",
+		"Russell Durham",
+		"Skyler Skjelset",
+		"Willem De Koch",
+		"Zubin Hensler"
+		])
+.range([
+		10,
+		20,
+		30,
+		40,
+		50,
+		60,
+		70,
+		80,
+		90,
+		100,
+		110,
+		120,
+		130,
+		140,
+		150,
+		160,
+		170,
+		180,
+		190,
+		200
+		]);
+
 
 
 
@@ -93,6 +144,7 @@ var text = plotting
 	.attr('y', 100)
 	.attr('x', function(d) {return scaleX(d.track)})
 	.text(function(d){return d.instrument})
+	//.style('opacity','0')
 
 
 //plotting.exit().remove();
@@ -113,8 +165,8 @@ function onForceTick(e){
             circles
                 .each(function(d){
                     var focus = {};
-                    focus.x = scaleX(d.track);
-                    focus.y = scaleD(d.primary);
+                    focus.y = scaleY(d.track);
+                    focus.x = scaleX(scaleXC(d.artist));
         
                     d.x += (focus.x-d.x)*(e.alpha*.12);
                     d.y += (focus.y-d.y)*(e.alpha*.12);
@@ -127,9 +179,9 @@ function onForceTick(e){
             text
                 .each(function(d){
                     var focus = {};
-                    focus.x = scaleX(d.track);
-                    focus.y = scaleD(d.primary);
-        
+                    focus.y = scaleY(d.track);
+                    focus.x = scaleX(scaleXC(d.artist));
+
                     d.x += (focus.x-d.x)*(e.alpha*.12);
                     d.y += (focus.y-d.y)*(e.alpha*.12);
                 })
