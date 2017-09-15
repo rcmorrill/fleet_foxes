@@ -14,10 +14,7 @@ var plot = d3.select('.canvas')
 	.attr('transform', 'translate ('+margin.l+','+margin.r+')');
 
 
-var force = d3.layout.force()
-    .size([width,height])
-    .charge(-5)
-    .gravity(0);
+
 
 
 var scaleY = d3.scale.linear().domain([1,11]).range([25,height]);
@@ -77,6 +74,10 @@ scaleXC = d3. scale.ordinal()
 
 
 
+
+
+
+
 d3.csv('data/fleet_foxes_V2.csv',parse,dataLoaded);
 
 // var axisX = d3.svg.axis()
@@ -101,11 +102,30 @@ d3.csv('data/fleet_foxes_V2.csv',parse,dataLoaded);
 
 function dataLoaded(err,data){
 
-var nestedData = d3.nest()
-	.key(function(d) {return d.Name})
-	.entries(data);
 
-console.log(nestedData);
+
+// d3.layout.pack()
+//     .sort(null)
+//     .size([width, height])
+//     .children(function(d) { return d.values; })
+//     .value(function(d) { return d.r })
+//     .nodes({values: d3.nest()
+//       .key(function(d) { return d.primary; })
+//       .entries(data)});
+
+
+    ///this thing above is working... but need to figure out
+
+var force = d3.layout.force()
+    .size([width,height])
+    .charge(-5)
+    .gravity(0);
+
+// var nestedData = d3.nest()
+// 	.key(function(d) {return d.Name})
+// 	.entries(data);
+
+// console.log(nestedData);
 
 	
 
@@ -158,13 +178,13 @@ plotting.exit().remove();
 
 
 //hack solution to crazy circles. need to investigate new packed circles
-text.transition()
- 	.duration(2000)
- 	.delay(250)
- 	.styleTween("opacity", function(d) {
-      var i = d3.interpolate(0, 0);
-      return function(t) { return d.r = i(t); };
-    });
+// text.transition()
+//  	.duration(2000)
+//  	.delay(250)
+//  	.styleTween("opacity", function(d) {
+//       var i = d3.interpolate(0, 0);
+//       return function(t) { return d.r = i(t); };
+//     });
 
 
  circles.transition()
@@ -313,7 +333,7 @@ function parse(d){
 
 	return{
 		track: +d.track,
-		x0: +d.track,
+		//x0: +d.track,
 		name: d.Name,
 		r: +d.radius,
 		trackLength:+d.trackLength,
