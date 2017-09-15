@@ -16,7 +16,7 @@ var plot = d3.select('.canvas')
 
 var force = d3.layout.force()
     .size([width,height])
-    .charge(0)
+    .charge(-5)
     .gravity(0);
 
 
@@ -30,26 +30,26 @@ var scaleX = d3.scale.linear().domain([10,200]).range([0,width]);
 scaleXC = d3. scale.ordinal()
 .domain([
 
-		"Andy Clausen",
-		"Brian Mcpherson",
-		"Casey Wescott",
-		"Christian Wargo",
-		"Christopher Icasiano",
-		"Dave Eggar",
-		"Hannah Epperson",
-		"Jeremy Kittel",
-		"Matthew Barrick",
-		"Morgan Henderson",
-		"Mulatu Astatke",
-		"Neal Morgan",
-		"Nicholas Cords",
-		"Pheonix Forte Choir",
-		"Riley Mulherkar",
-		"Robin Pecknold",
-		"Russell Durham",
-		"Skyler Skjelset",
-		"Willem De Koch",
-		"Zubin Hensler"
+			"Robin Pecknold",
+			"Skyler Skjelset",
+			"Casey Wescott",
+			"Morgan Henderson",
+			"Christian Wargo",
+			"Andy Clausen",
+			"Riley Mulherkar",
+			"Willem De Koch",
+			"Zubin Hensler",
+			"Matthew Barrick",
+			"Christopher Icasiano",
+			"Hannah Epperson",
+			"Dave Eggar",
+			"Jeremy Kittel",
+			"Nicholas Cords",
+			"Russell Durham",
+			"Neal Morgan",
+			"Brian Mcpherson",
+			"Mulatu Astatke",
+			"Pheonix Forte Choir"
 		])
 .range([
 		10,
@@ -111,7 +111,7 @@ console.log(nestedData);
 
 var plotting = plot.selectAll('.nodes')
 	.data(data)
-	.enter()
+plotting.enter()
 	.insert('g')
 
 
@@ -119,12 +119,15 @@ var plotting = plot.selectAll('.nodes')
 var circles = plotting
 	.insert('circle')
 	.attr('class','nodes')
-	.attr('cy', 100)
-	.attr('cx', function(d) {return scaleX(d.track)})
-	.attr('r',function(d){return d.r})
+	.attr('cy', function(d){return scaleY(d.track)})
+	.attr('cx', function(d){return scaleX(scaleXC(d.artist))})
+
+	.attr('r',0)
 	.style('fill',function(d)
 		{if (d.artist == "Robin Pecknold")
-			{return'red'}
+			{return'rgb(250,0,0)'}
+		else if (d.primary == 1)
+			{return 'rgba(250,0,0,.5)'}
 		else return 'rgb(45,45,45)'})
 
 
@@ -144,14 +147,96 @@ var text = plotting
 	.attr('y', 100)
 	.attr('x', function(d) {return scaleX(d.track)})
 	.text(function(d){return d.instrument})
-	//.style('opacity','0')
+	.style('opacity','0')
 
 
-//plotting.exit().remove();
+plotting.exit().remove();
 
-force.nodes(data)
-	.on('tick',onForceTick)
-	.start();
+		    force.nodes(data)
+		        .on('tick', firstForce)
+		        .start();
+
+
+//hack solution to crazy circles. need to investigate new packed circles
+text.transition()
+ 	.duration(2000)
+ 	.delay(250)
+ 	.styleTween("opacity", function(d) {
+      var i = d3.interpolate(0, 0);
+      return function(t) { return d.r = i(t); };
+    });
+
+
+ circles.transition()
+ 	.duration(2000)
+ 	.delay(250)
+ 	 .attrTween("r", function(d) {
+      var i = d3.interpolate(0, d.r);
+      return function(t) { return d.r = i(t); };
+    });
+
+
+
+d3.selectAll('.btn').on('click', function(){
+    var selection = d3.select(this).attr('id');
+		if (selection == '1'){
+		    //plotting.transition().duration(100000)
+				force.stop()
+		    force.nodes(data)
+		        .on('tick', firstForce)
+		        .start();
+		}
+		else {
+		    plotting.transition()
+		    	force.stop() 
+		    force.nodes(data)
+		        .on('tick',onForceTick)
+		        .start();
+		}
+})
+
+
+function firstForce(e){
+            var q = d3.geom.quadtree(data),
+                i = 0,
+                n = data.length;
+    
+            while( ++i<n ){
+                q.visit(collide(data[i]));
+            }
+        
+            circles
+                .each(function(d){
+                    var focus = {};
+                    focus.y = scaleY(d.track);
+                    focus.x = 100;
+        
+                    d.x += (focus.x-d.x)*(e.alpha*.13);
+                    d.y += (focus.y-d.y)*(e.alpha*.13);
+                })
+
+               .attr('cy',function(d){return d.y})
+               .attr('cx',function(d){return d.x})
+
+
+            text
+                .each(function(d){
+                    var focus = {};
+                    focus.y = scaleY(d.track);
+                    focus.x = 100;
+
+                    d.x += (focus.x-d.x)*(e.alpha*.13);
+                    d.y += (focus.y-d.y)*(e.alpha*.13);
+                })
+
+               .attr('y',function(d){return d.y})
+               .attr('x',function(d){return d.x})
+
+
+    
+}//END onForceTick Function
+
+
 
 function onForceTick(e){
             var q = d3.geom.quadtree(data),
@@ -168,8 +253,8 @@ function onForceTick(e){
                     focus.y = scaleY(d.track);
                     focus.x = scaleX(scaleXC(d.artist));
         
-                    d.x += (focus.x-d.x)*(e.alpha*.12);
-                    d.y += (focus.y-d.y)*(e.alpha*.12);
+                    d.x += (focus.x-d.x)*(e.alpha*.15);
+                    d.y += (focus.y-d.y)*(e.alpha*.15);
                 })
 
                .attr('cy',function(d){return d.y})
@@ -182,8 +267,8 @@ function onForceTick(e){
                     focus.y = scaleY(d.track);
                     focus.x = scaleX(scaleXC(d.artist));
 
-                    d.x += (focus.x-d.x)*(e.alpha*.12);
-                    d.y += (focus.y-d.y)*(e.alpha*.12);
+                    d.x += (focus.x-d.x)*(e.alpha*.15);
+                    d.y += (focus.y-d.y)*(e.alpha*.15);
                 })
 
                .attr('y',function(d){return d.y})
@@ -195,7 +280,7 @@ function onForceTick(e){
 
 
  function collide(dataPoint){
-                var nr = dataPoint.r + 0,
+                var nr = dataPoint.r + 2,
                 nx1 = dataPoint.x - nr,
                 ny1 = dataPoint.y - nr,
                 nx2 = dataPoint.x + nr,
@@ -234,6 +319,7 @@ function parse(d){
 		trackLength:+d.trackLength,
 		artist: d.artist,
 		primary: d.primary,
+		key: +d.key,
 		instrument: d.instrument,
 	}
 }
