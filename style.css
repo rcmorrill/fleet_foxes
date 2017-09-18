@@ -21,7 +21,7 @@ header{
 .container .canvas{
 	margin-left:10%;
 	margin-right:10%;
-	height: 1000px;
+	height: 800px;
 	background: none;
 }
 
@@ -70,6 +70,7 @@ header{
 	background-color:rgb(48,55,67);
 	color:rgb(254,254,254);
 	text-decoration:none;
+	outline:none;
 }
 
 
@@ -80,6 +81,6 @@ header{
 .btn{
 	position:relative;
 	float:left;
-	margin-top:5%;
+	margin-top:1%;
 	text-decoration:none;
 }
