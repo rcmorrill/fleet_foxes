@@ -24,6 +24,9 @@ var scaleD = d3.scale.linear().domain([1,0]).range([100,400]);
 var scaleX = d3.scale.linear().domain([10,200]).range([0,width]);
 //need to make something better than this at some point
 
+var scaleCX = d3.scale.linear().domain([0,100]).range([0,width]);
+var scaleCY= d3.scale.linear().domain([0,100]).range([height,0]);
+
 scaleXC = d3. scale.ordinal()
 .domain([
 
@@ -118,8 +121,9 @@ function dataLoaded(err,data){
 
 var force = d3.layout.force()
     .size([width,height])
-    .charge(-5)
-    .gravity(0);
+    .charge(-7)
+    .gravity(0)
+    .friction(.9);
 
 // var nestedData = d3.nest()
 // 	.key(function(d) {return d.Name})
@@ -130,17 +134,19 @@ var force = d3.layout.force()
 	
 
 var plotting = plot.selectAll('.nodes')
-	.data(data)
-plotting.enter()
-	.insert('g')
+	.data(data, function(d){return d.key})
+// plotting.enter()
+// 	.insert('g')
 
 
 
-var circles = plotting
-	.insert('circle')
+// var circles = 
+plotting
+	.enter()
+	.append('circle')
 	.attr('class','nodes')
-	.attr('cy', function(d){return scaleY(d.track)})
-	.attr('cx', function(d){return scaleX(scaleXC(d.artist))})
+	.attr('cy', function(d){return d.y})
+	.attr('cx', function(d){return d.x})
 
 	.attr('r',0)
 	.style('fill',function(d)
@@ -161,23 +167,24 @@ var circles = plotting
 
 
 
-var text = plotting
-	.insert('text')
-	.attr('class','labels')
-	.attr('y', 100)
-	.attr('x', function(d) {return scaleX(d.track)})
-	.text(function(d){return d.instrument})
-	.style('opacity','0')
+// var text = plotting
+// 	.insert('text')
+// 	.attr('class','labels')
+// 	.attr('y', 100)
+// 	.attr('x', function(d) {return scaleX(d.track)})
+// 	.text(function(d){return d.instrument})
+// 	.style('opacity','0')
+
+force.nodes(data)
+    .on('tick', firstForce)
+    .start();
 
 
 plotting.exit().remove();
 
-		    force.nodes(data)
-		        .on('tick', firstForce)
-		        .start();
 
+//text transition
 
-//hack solution to crazy circles. need to investigate new packed circles
 // text.transition()
 //  	.duration(2000)
 //  	.delay(250)
@@ -187,32 +194,62 @@ plotting.exit().remove();
 //     });
 
 
- circles.transition()
- 	.duration(2000)
- 	.delay(250)
+ plotting.transition()
+ 	.duration(900)
+ 	.delay(15)
  	 .attrTween("r", function(d) {
       var i = d3.interpolate(0, d.r);
       return function(t) { return d.r = i(t); };
     });
 
-
+console.log(data);
 
 d3.selectAll('.btn').on('click', function(){
     var selection = d3.select(this).attr('id');
+
 		if (selection == '1'){
-		    //plotting.transition().duration(100000)
-				force.stop()
+		    plotting.transition()
+		    force
+		    	.friction(.85)
+		    	.nodes(data)
+		    	.on('tick',forceChart)
+		    	.start();
 		    force.nodes(data)
 		        .on('tick', firstForce)
 		        .start();
+
 		}
-		else {
+		else if (selection =='2'){
 		    plotting.transition()
-		    	force.stop() 
-		    force.nodes(data)
-		        .on('tick',onForceTick)
-		        .start();
+		    force
+		    	.friction(.85)
+		    	.nodes(data)
+		     	.on('tick',onForceTick)
+		     	.start();
 		}
+
+		else if (selection =='3'){
+			plotting.transition()
+			force
+				.friction(.7)
+				.nodes(data)
+				.on('tick',forceChart)
+				.start();
+
+		}
+
+		// else if (selection =='3'){
+		//     plotting
+		//     .transition().duration(1000)
+		//     .attr('cx', function(d){return scaleCX(d.cordX);})
+		// 	.attr('cy', function(d){return scaleCY(d.cordY);})
+		// 	.attr('r',5)
+		// 	force.stop();
+		// 			//plotting.transition()
+		// 	// force.nodes(data)
+		// 	// 	.on('tick',forceChart)
+		// 	// 	.start();
+		// }
 })
 
 
@@ -225,7 +262,7 @@ function firstForce(e){
                 q.visit(collide(data[i]));
             }
         
-            circles
+            plotting
                 .each(function(d){
                     var focus = {};
                     focus.y = scaleY(d.track);
@@ -239,18 +276,18 @@ function firstForce(e){
                .attr('cx',function(d){return d.x})
 
 
-            text
-                .each(function(d){
-                    var focus = {};
-                    focus.y = scaleY(d.track);
-                    focus.x = 100;
+            // text
+            //     .each(function(d){
+            //         var focus = {};
+            //         focus.y = scaleY(d.track);
+            //         focus.x = 100;
 
-                    d.x += (focus.x-d.x)*(e.alpha*.13);
-                    d.y += (focus.y-d.y)*(e.alpha*.13);
-                })
+            //         d.x += (focus.x-d.x)*(e.alpha*.13);
+            //         d.y += (focus.y-d.y)*(e.alpha*.13);
+            //     })
 
-               .attr('y',function(d){return d.y})
-               .attr('x',function(d){return d.x})
+            //    .attr('y',function(d){return d.y})
+            //    .attr('x',function(d){return d.x})
 
 
     
@@ -267,7 +304,7 @@ function onForceTick(e){
                 q.visit(collide(data[i]));
             }
         
-            circles
+            plotting
                 .each(function(d){
                     var focus = {};
                     focus.y = scaleY(d.track);
@@ -281,22 +318,44 @@ function onForceTick(e){
                .attr('cx',function(d){return d.x})
 
 
-            text
-                .each(function(d){
-                    var focus = {};
-                    focus.y = scaleY(d.track);
-                    focus.x = scaleX(scaleXC(d.artist));
+            // text
+            //     .each(function(d){
+            //         var focus = {};
+            //         focus.y = scaleY(d.track);
+            //         focus.x = scaleX(scaleXC(d.artist));
 
-                    d.x += (focus.x-d.x)*(e.alpha*.15);
-                    d.y += (focus.y-d.y)*(e.alpha*.15);
-                })
+            //         d.x += (focus.x-d.x)*(e.alpha*.15);
+            //         d.y += (focus.y-d.y)*(e.alpha*.15);
+            //     })
 
-               .attr('y',function(d){return d.y})
-               .attr('x',function(d){return d.x})
+            //    .attr('y',function(d){return d.y})
+            //    .attr('x',function(d){return d.x})
 
 
     
 }//END onForceTick Function
+
+
+function forceChart(e){
+
+        
+            plotting
+                .each(function(d){
+                    var focus = {};
+                    focus.y = scaleCY(d.cordY);
+                    focus.x = scaleCX(d.cordX);
+        
+                    d.x += (focus.x-d.x)*(e.alpha*.5);
+                    d.y += (focus.y-d.y)*(e.alpha*.5);
+                })
+
+               .attr('cy',function(d){return d.y})
+               .attr('cx',function(d){return d.x})
+
+
+
+    
+}//END forceChart Function
 
 
  function collide(dataPoint){
@@ -330,10 +389,14 @@ function onForceTick(e){
 
 function parse(d){
 
+	var test = scaleY(d.track);
+
 
 	return{
 		track: +d.track,
-		//x0: +d.track,
+		x0: 100+Math.random()*5,
+		x: 100+Math.random()*5,
+		y: test+ Math.random()*5,
 		name: d.Name,
 		r: +d.radius,
 		trackLength:+d.trackLength,
@@ -341,6 +404,8 @@ function parse(d){
 		primary: d.primary,
 		key: +d.key,
 		instrument: d.instrument,
+		cordX: +d.cordX,
+		cordY: +d.cordY,
 	}
 }
 
