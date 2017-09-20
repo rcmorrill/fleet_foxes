@@ -19,16 +19,11 @@ document.getElementById('0').focus();
 
 var scaleY = d3.scale.linear().domain([1,11]).range([50,height]);
 var scaleD = d3.scale.linear().domain([1,0]).range([100,400]);
-
 var scaleX = d3.scale.linear().domain([10,200]).range([0,width]);
-
 var scaleCX = d3.scale.linear().domain([0,100]).range([0,width]);
 var scaleCY= d3.scale.linear().domain([0,100]).range([height,35]);
-
 var scaleI= d3.scale.linear().domain([1,53]).range([0,width]);
-
 var scaleStart=d3.scale.ordinal().domain([2,1,0]).range([width*.30,width*.5,width*.7])
-
 scaleXC = d3. scale.ordinal()
 .domain([
 
@@ -85,38 +80,16 @@ scaleXC = d3. scale.ordinal()
 
 d3.csv('data/fleet_foxes_V2.csv',parse,dataLoaded);
 
-// var axisX = d3.svg.axis()
-// 	.orient('bottom')
-// 	.innerTickSize(-height)
-// 	.scale(scaleX);
 
-// plot.append('g').attr('class','axis')
-// 	.attr("transform", "translate(0," + height + ")")
-// 	.call(axisX);
-
-// var axisY = d3.svg.axis()
-// 	.orient('left')
-// 	.innerTickSize(0)
-// 	.scale(scaleY);
-
-// plot.append('g').attr('class','axis')
-// 	.call(axisY);
-
-
-//PRIMARY FUNCTION
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 function dataLoaded(err,data){
 
-
-// d3.layout.pack()
-//     .sort(null)
-//     .size([width/2, height/2])
-//     .children(function(d) { return d.values; })
-//     .value(function(d) { return d.r})
-//     .nodes({values: d3.nest()
-//       .key(function(d) { return d.primary; })
-//       .entries(data)});
-
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 var force = d3.layout.force()
     .size([width,height])
@@ -129,10 +102,9 @@ var force = d3.layout.force()
 
 // console.log(nestedData);
 
-	
 
 var plotting = plot.selectAll('.nodes')
-	.data(data, function(d){return d.key})
+	.data(data)
 
 plotting
 	.enter()
@@ -156,9 +128,7 @@ force.nodes(data)
     .start();
 
 
-plotting.exit().remove();
-
-
+//plotting.exit().remove();
 
  plotting.transition()
  	.duration(1000)
@@ -219,205 +189,297 @@ d3.selectAll('.btn').on('click', function(){
 				.start();
 
 		}
+		else if (selection =='5'){
+			plotting.transition()
+			force
+				.friction(.82)
+				//.gravity(-.02)
+				//.charge(-1.5)
+				.nodes(data)
+				.on('tick',singleForce)
+				.start();
+
+		}
+		else if (selection =='6'){
+			plotting.transition()
+			force
+				.friction(.72)
+				//.gravity(-.02)
+				//.charge(-1.5)
+				.nodes(data)
+				.on('tick',singleForce2)
+				.start();
+
+		}
 
 })
 
 
-// big cluster in the middle
-function loadForce(e){
-            var q = d3.geom.quadtree(data),
-                i = 0,
-                n = data.length;
-    
-            while( ++i<n ){
-                q.visit(collide(data[i]));
-            }
-        
-            plotting
-                .each(function(d){
-                    var focus = {};
-                    focus.y = height/2;
-                    focus.x = width/2;
-        
-                    d.x += (focus.x-d.x)*(e.alpha*.12);
-                    d.y += (focus.y-d.y)*(e.alpha*.12);
-                })
+				// big cluster in the middle
+				function loadForce(e){
+				            var q = d3.geom.quadtree(data),
+				                i = 0,
+				                n = data.length;
+				    
+				            while( ++i<n ){
+				                q.visit(collide(data[i]));
+				            }
+				        
+				            plotting
+				                .each(function(d){
+				                    var focus = {};
+				                    focus.y = height/2;
+				                    focus.x = width/2;
+				        
+				                    d.x += (focus.x-d.x)*(e.alpha*.12);
+				                    d.y += (focus.y-d.y)*(e.alpha*.12);
+				                })
 
-               .attr('cy',function(d){return d.y})
-               .attr('cx',function(d){return d.x})
-
-
-
-
-    
-}//END loadForce Function
-
-
-//breakout by track
-function firstForce(e){
-            var q = d3.geom.quadtree(data),
-                i = 0,
-                n = data.length;
-    
-            while( ++i<n ){
-                q.visit(collide(data[i]));
-            }
-        
-            plotting
-                .each(function(d){
-                    var focus = {};
-                    focus.y = scaleY(d.track);
-                    focus.x = width/2;
-        
-                    d.x += (focus.x-d.x)*(e.alpha*.13);
-                    d.y += (focus.y-d.y)*(e.alpha*.13);
-                })
-
-               .attr('cy',function(d){return d.y})
-               .attr('cx',function(d){return d.x})
+				               .attr('cy',function(d){return d.y})
+				               .attr('cx',function(d){return d.x})
 
 
 
 
-    
-}//END firstForce Function
+				    
+				}//END loadForce Function
 
 
-//breakout by track and artist
-function onForceTick(e){
-            var q = d3.geom.quadtree(data),
-                i = 0,
-                n = data.length;
-    
-            while( ++i<n ){
-                q.visit(collide(data[i]));
-            }
-        
-            plotting
-                .each(function(d){
-                    var focus = {};
-                    focus.y = scaleY(d.track);
-                    focus.x = scaleX(scaleXC(d.artist));
-        
-                    d.x += (focus.x-d.x)*(e.alpha*.15);
-                    d.y += (focus.y-d.y)*(e.alpha*.15);
-                })
+				//breakout by track
+				function firstForce(e){
+				            var q = d3.geom.quadtree(data),
+				                i = 0,
+				                n = data.length;
+				    
+				            while( ++i<n ){
+				                q.visit(collide(data[i]));
+				            }
+				        
+				            plotting
+				                .each(function(d){
+				                    var focus = {};
+				                    focus.y = scaleY(d.track);
+				                    focus.x = width/2;
+				        
+				                    d.x += (focus.x-d.x)*(e.alpha*.13);
+				                    d.y += (focus.y-d.y)*(e.alpha*.13);
+				                })
 
-               .attr('cy',function(d){return d.y})
-               .attr('cx',function(d){return d.x})
-
-
-    
-}//END onForceTick Function
-
-//breakout by test variables into scatterplot
-function forceChart(e){
-
-        
-            plotting
-                .each(function(d){
-                    var focus = {};
-                    focus.y = scaleCY(d.cordY);
-                    focus.x = scaleCX(d.cordX);
-        
-                    d.x += (focus.x-d.x)*(e.alpha*.5);
-                    d.y += (focus.y-d.y)*(e.alpha*.5);
-                })
-
-               .attr('cy',function(d){return d.y})
-               .attr('cx',function(d){return d.x})
+				               .attr('cy',function(d){return d.y})
+				               .attr('cx',function(d){return d.x})
 
 
 
-    
-}//END forceChart Function
+
+				    
+				}//END firstForce Function
+
+
+				//breakout by track and artist
+				function onForceTick(e){
+				            var q = d3.geom.quadtree(data),
+				                i = 0,
+				                n = data.length;
+				    
+				            while( ++i<n ){
+				                q.visit(collide(data[i]));
+				            }
+				        
+				            plotting
+				                .each(function(d){
+				                    var focus = {};
+				                    focus.y = scaleY(d.track);
+				                    focus.x = scaleX(scaleXC(d.artist));
+				        
+				                    d.x += (focus.x-d.x)*(e.alpha*.15);
+				                    d.y += (focus.y-d.y)*(e.alpha*.15);
+				                })
+
+				               .attr('cy',function(d){return d.y})
+				               .attr('cx',function(d){return d.x})
+
+
+				    
+				}//END onForceTick Function
+
+				//breakout by test variables into scatterplot
+				function forceChart(e){
+
+				        
+				            plotting
+				                .each(function(d){
+				                    var focus = {};
+				                    focus.y = scaleCY(d.cordY);
+				                    focus.x = scaleCX(d.cordX);
+				        
+				                    d.x += (focus.x-d.x)*(e.alpha*.5);
+				                    d.y += (focus.y-d.y)*(e.alpha*.5);
+				                })
+
+				               .attr('cy',function(d){return d.y})
+				               .attr('cx',function(d){return d.x})
 
 
 
-//breakout by track and instrument
-function barForce(e){
-
-            var q = d3.geom.quadtree(data),
-                i = 0,
-                n = data.length;
-    
-            while( ++i<n ){
-                q.visit(collide(data[i]));
-            }
-        
-            plotting
-                .each(function(d){
-                    var focus = {};
-                    focus.y = scaleY(d.track);
-                    focus.x = scaleI(d.iNum);
-        
-                    d.x += (focus.x-d.x)*(e.alpha*.15);
-                   d.y += (focus.y-d.y)*(e.alpha*.15);
-                })
-
-               .attr('cy',function(d){return d.y})
-               .attr('cx',function(d){return d.x})
+				    
+				}//END forceChart Function
 
 
 
-    
-}//END barForce Function
+				//breakout by track and instrument
+				function barForce(e){
+
+				            var q = d3.geom.quadtree(data),
+				                i = 0,
+				                n = data.length;
+				    
+				            while( ++i<n ){
+				                q.visit(collide(data[i]));
+				            }
+				        
+				            plotting
+				                .each(function(d){
+				                    var focus = {};
+				                    focus.y = scaleY(d.track);
+				                    focus.x = scaleI(d.iNum);
+				        
+				                    d.x += (focus.x-d.x)*(e.alpha*.15);
+				                   d.y += (focus.y-d.y)*(e.alpha*.15);
+				                })
+
+				               .attr('cy',function(d){return d.y})
+				               .attr('cx',function(d){return d.x})
 
 
- function collide(dataPoint){
-                var nr = dataPoint.r + 1,
-                nx1 = dataPoint.x - nr,
-                ny1 = dataPoint.y - nr,
-                nx2 = dataPoint.x + nr,
-                ny2 = dataPoint.y + nr;
-    
-                return function(quadPoint,x1,y1,x2,y2){
-                    if(quadPoint.point && (quadPoint.point !== dataPoint)){
-                        var x = dataPoint.x - quadPoint.point.x,
-                            y = dataPoint.y - quadPoint.point.y,
-                            l = Math.sqrt(x*x+y*y),
-                            r = nr + quadPoint.point.r;
-                        if(l<r){
-			                l = (l-r)/l*.1;
-			                dataPoint.x -= x*= (l*1.05);
-			                dataPoint.y -= y*= l;
-			                quadPoint.point.x += (x*1.05);
-			                quadPoint.point.y += y;
-                        }
-                    }
-                    return x1>nx2 || x2<nx1 || y1>ny2 || y2<ny1;
-                }
-            }// END collide
+
+				    
+				}//END barForce Function
 
 
- function collide2(dataPoint){
-                var nr = dataPoint.r + 0,
-                nx1 = dataPoint.x - nr,
-                ny1 = dataPoint.y - nr,
-                nx2 = dataPoint.x + nr,
-                ny2 = dataPoint.y + nr;
-    
-                return function(quadPoint,x1,y1,x2,y2){
-                    if(quadPoint.point && (quadPoint.point !== dataPoint)){
-                        var x = dataPoint.x - quadPoint.point.x,
-                            y = dataPoint.y - quadPoint.point.y,
-                            l = Math.sqrt(x*x+y*y),
-                            r = nr + quadPoint.point.r;
-                        if(l<r){
-			                l = (l-r)/l*.1;
-			                dataPoint.x -= x*= (l*.02);
-			                dataPoint.y -= y*= l;
-			                quadPoint.point.x += (x*.02);
-			                quadPoint.point.y += y;
-                        }
-                    }
-                    return x1>nx2 || x2<nx1 || y1>ny2 || y2<ny1;
-                }
-            }// END collide
+				function singleForce(e){
 
+				            var q = d3.geom.quadtree(data),
+				                i = 0,
+				                n = data.length;
+				    
+				            while( ++i<n ){
+				                q.visit(collide2(data[i]));
+				            }
+				        
+				            plotting
+				                .each(function(d){
+				                    var focus = {};
+				                    focus.y = height/2;
+				                    focus.x = scaleI(d.iNum);
+				        
+				                    d.x += (focus.x-d.x)*(e.alpha*.65);
+				                   d.y += (focus.y-d.y)*(e.alpha*.13);
+				                })
+
+				               .attr('cy',function(d){return d.y})
+				               .attr('cx',function(d){return d.x})
+
+
+
+				    
+				}//END barForce Function
+
+
+				function singleForce2(e){
+
+				            var q = d3.geom.quadtree(data),
+				                i = 0,
+				                n = data.length;
+				    
+				            while( ++i<n ){
+				                q.visit(collide2(data[i]));
+				            }
+				        
+				            plotting
+				                .each(function(d){
+				                    var focus = {};
+				                    if(d.primary>=1){focus.y=height*.3}
+				                   	else{focus.y=height*.6}
+
+				                    focus.x = scaleI(d.iNum);
+				        
+				                    d.x += (focus.x-d.x)*(e.alpha*.65);
+				                   d.y += (focus.y-d.y)*(e.alpha*.13);
+				                })
+
+				               .attr('cy',function(d){return d.y})
+				               .attr('cx',function(d){return d.x})
+
+
+				    
+				}//END barForce Function
+
+
+
+				 function collide(dataPoint){
+				                var nr = dataPoint.r,
+				                nx1 = dataPoint.x - nr,
+				                ny1 = dataPoint.y - nr,
+				                nx2 = dataPoint.x + nr,
+				                ny2 = dataPoint.y + nr;
+				    
+				                return function(quadPoint,x1,y1,x2,y2){
+				                    if(quadPoint.point && (quadPoint.point !== dataPoint)){
+				                        var x = dataPoint.x - quadPoint.point.x,
+				                            y = dataPoint.y - quadPoint.point.y,
+				                            l = Math.sqrt(x*x+y*y),
+				                            r = nr + quadPoint.point.r;
+				                        if(l<r){
+							                l = (l-r)/l*.1;
+							                dataPoint.x -= x*= (l*1.05);
+							                dataPoint.y -= y*= l;
+							                quadPoint.point.x += (x*1.05);
+							                quadPoint.point.y += y;
+				                        }
+				                    }
+				                    return x1>nx2 || x2<nx1 || y1>ny2 || y2<ny1;
+				                }
+				            }// END collide
+
+
+				 function collide2(dataPoint){
+				                var nr = dataPoint.r + 3,
+				                nx1 = dataPoint.x - nr,
+				                ny1 = dataPoint.y - nr,
+				                nx2 = dataPoint.x + nr,
+				                ny2 = dataPoint.y + nr;
+				    
+				                return function(quadPoint,x1,y1,x2,y2){
+				                    if(quadPoint.point && (quadPoint.point !== dataPoint)){
+				                        var x = dataPoint.x - quadPoint.point.x,
+				                            y = dataPoint.y - quadPoint.point.y,
+				                            l = Math.sqrt(x*x+y*y),
+				                            r = nr + quadPoint.point.r;
+				                        if(l<r){
+							                l = (l-r)/l*.1;
+							                dataPoint.x -= x*= (l*-.6);
+							                dataPoint.y -= y*= l;
+							                quadPoint.point.x += (x*-.6);
+							                quadPoint.point.y += y;
+				                        }
+				                    }
+				                    return x1>nx2 || x2<nx1 || y1>ny2 || y2<ny1;
+				                }
+				            }// END collide
+                
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 }//END DATA LOADED
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 function parse(d){
 
