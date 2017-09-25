@@ -1,52 +1,82 @@
 key,track,Name,trackLength,artist,primary,instrument,instrumemt_num,radius,cordX,cordY
-173,7,Mearcstapa,250,Casey Wescott,1,Blue Noise Synth,9,4,80,10
-254,11,Crack-Up,384,Casey Wescott,1,Blue Noise Synth,9,4,66,56
-17,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Chromatic Bells,12,4,94,34
-257,11,Crack-Up,384,Casey Wescott,1,Chromatic Bells,12,4,94,34
-172,7,Mearcstapa,250,Casey Wescott,1,Harpsichord,25,4,94,34
-72,2,"Cassius,-",290,Casey Wescott,1,Kettledrum,26,4,94,34
-136,5,Third Of May / Odaigahara,528,Casey Wescott,1,Koto,28,4,94,34
-16,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Piano,35,4,94,34
-20,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Programming,40,4,94,34
-50,2,"Cassius,-",290,Casey Wescott,1,Programming,40,4,94,34
-164,7,Mearcstapa,250,Casey Wescott,1,Programming,40,4,42,96
-253,11,Crack-Up,384,Casey Wescott,1,Programming,40,4,20,49
-19,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Qraqebs,41,4,55,38
-166,7,Mearcstapa,250,Casey Wescott,1,Qraqebs,41,4,84,98
-18,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Supercollider Birdsong,45,4,100,99
-15,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Christian Wargo,1,Bass,8,4,90,88
-165,7,Mearcstapa,250,Christian Wargo,1,Bass,8,4,18,77
-231,10,I Should See Memphis,284,Christian Wargo,1,Bass,8,4,75,85
-243,11,Crack-Up,384,Christian Wargo,1,Bass,8,4,40,24
-234,10,I Should See Memphis,284,Christian Wargo,1,Drum Kit,18,4,100,94
-14,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Christian Wargo,1,Vocals,51,4,29,41
-89,3,"Naiads, Cassadies",191,Christian Wargo,1,Vocals,51,4,67,16
-235,10,I Should See Memphis,284,Morgan Henderson,1,Alto Flute,5,4,99,95
-21,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Cello,11,4,9,59
-194,8,On Another Ocean (January / June),263,Morgan Henderson,1,Cello,11,4,78,77
-23,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Double Bass,16,4,80,85
-168,7,Mearcstapa,250,Morgan Henderson,1,Double Bass,16,4,46,70
-24,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Pitched Bass Clarinet,36,4,100,17
-258,11,Crack-Up,384,Morgan Henderson,1,Pitched Bass Clarinet,36,4,36,1
-74,2,"Cassius,-",290,Morgan Henderson,1,Pitched Clarinet,37,4,71,18
-73,2,"Cassius,-",290,Morgan Henderson,1,Pitched Flute,38,4,35,11
-22,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Qraqebs,41,4,54,10
-167,7,Mearcstapa,250,Morgan Henderson,1,Qraqebs,41,4,60,33
+35,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Andy Clausen,0, Trombone,1,4,62,7
+36,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Willem De Koch,0, Trombone,1,4,81,56
+54,2,"Cassius,-",290,Andy Clausen,0, Trombone,1,4,86,26
+55,2,"Cassius,-",290,Willem De Koch,0, Trombone,1,4,29,17
+83,3,"Naiads, Cassadies",191,Andy Clausen,0, Trombone,1,4,14,6
+84,3,"Naiads, Cassadies",191,Willem De Koch,0, Trombone,1,4,16,41
+95,4,Kept Woman,235,Andy Clausen,0, Trombone,1,4,22,11
+96,4,Kept Woman,235,Willem De Koch,0, Trombone,1,4,80,13
+112,5,Third Of May / Odaigahara,528,Andy Clausen,0, Trombone,1,4,62,37
+113,5,Third Of May / Odaigahara,528,Willem De Koch,0, Trombone,1,4,56,39
+141,6,"If You Need To, Keep Time On Me",211,Andy Clausen,0, Trombone,1,4,41,42
+142,6,"If You Need To, Keep Time On Me",211,Willem De Koch,0, Trombone,1,4,5,40
+152,7,Mearcstapa,250,Andy Clausen,0, Trombone,1,4,29,38
+153,7,Mearcstapa,250,Willem De Koch,0, Trombone,1,4,66,13
+178,8,On Another Ocean (January / June),263,Andy Clausen,0, Trombone,1,4,88,68
+179,8,On Another Ocean (January / June),263,Willem De Koch,0, Trombone,1,4,39,86
+202,9,FoolÕS Errand,288,Andy Clausen,0, Trombone,1,4,30,67
+203,9,FoolÕS Errand,288,Willem De Koch,0, Trombone,1,4,75,55
+220,10,I Should See Memphis,284,Andy Clausen,0, Trombone,1,4,10,28
+221,10,I Should See Memphis,284,Willem De Koch,0, Trombone,1,4,55,75
+237,11,Crack-Up,384,Andy Clausen,0, Trombone,1,4,69,100
+238,11,Crack-Up,384,Willem De Koch,0, Trombone,1,4,78,55
+37,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Zubin Hensler,0, Trumpet,2,4,40,57
+38,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Riley Mulherkar,0, Trumpet,2,4,2,90
+56,2,"Cassius,-",290,Zubin Hensler,0, Trumpet,2,4,85,83
+57,2,"Cassius,-",290,Riley Mulherkar,0, Trumpet,2,4,76,1
+85,3,"Naiads, Cassadies",191,Zubin Hensler,0, Trumpet,2,4,74,90
+86,3,"Naiads, Cassadies",191,Riley Mulherkar,0, Trumpet,2,4,83,64
+97,4,Kept Woman,235,Zubin Hensler,0, Trumpet,2,4,45,89
+98,4,Kept Woman,235,Riley Mulherkar,0, Trumpet,2,4,44,68
+114,5,Third Of May / Odaigahara,528,Zubin Hensler,0, Trumpet,2,4,68,97
+115,5,Third Of May / Odaigahara,528,Riley Mulherkar,0, Trumpet,2,4,20,3
+143,6,"If You Need To, Keep Time On Me",211,Zubin Hensler,0, Trumpet,2,4,87,21
+144,6,"If You Need To, Keep Time On Me",211,Riley Mulherkar,0, Trumpet,2,4,55,24
+154,7,Mearcstapa,250,Zubin Hensler,0, Trumpet,2,4,38,13
+155,7,Mearcstapa,250,Riley Mulherkar,0, Trumpet,2,4,62,50
+180,8,On Another Ocean (January / June),263,Zubin Hensler,0, Trumpet,2,4,96,41
+181,8,On Another Ocean (January / June),263,Riley Mulherkar,0, Trumpet,2,4,91,94
+204,9,FoolÕS Errand,288,Zubin Hensler,0, Trumpet,2,4,26,44
+205,9,FoolÕS Errand,288,Riley Mulherkar,0, Trumpet,2,4,67,24
+222,10,I Should See Memphis,284,Zubin Hensler,0, Trumpet,2,4,69,51
+223,10,I Should See Memphis,284,Riley Mulherkar,0, Trumpet,2,4,92,4
+239,11,Crack-Up,384,Zubin Hensler,0, Trumpet,2,4,27,48
+240,11,Crack-Up,384,Riley Mulherkar,0, Trumpet,2,4,7,92
 4,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,12 String Acoustic,3,4,98,51
 43,2,"Cassius,-",290,Robin Pecknold,2,12 String Acoustic,3,4,28,48
-217,9,Fool’S Errand,288,Robin Pecknold,2,12 String Acoustic,3,4,61,2
+217,9,FoolÕS Errand,288,Robin Pecknold,2,12 String Acoustic,3,4,61,2
 247,11,Crack-Up,384,Robin Pecknold,2,12 String Acoustic,3,4,35,97
 5,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,12 String Electric,4,4,52,74
 44,2,"Cassius,-",290,Robin Pecknold,2,12 String Electric,4,4,82,53
 77,3,"Naiads, Cassadies",191,Robin Pecknold,2,12 String Electric,4,4,38,42
 163,7,Mearcstapa,250,Robin Pecknold,2,12 String Electric,4,4,20,47
 184,8,On Another Ocean (January / June),263,Robin Pecknold,2,12 String Electric,4,4,37,47
+235,10,I Should See Memphis,284,Morgan Henderson,1,Alto Flute,5,4,99,95
+171,7,Mearcstapa,250,Skyler Skjelset,1,Amplifier Noise,6,4,71,3
 59,2,"Cassius,-",290,Robin Pecknold,2,Baldwin Electric Harpsichord,7,4,16,54
 101,4,Kept Woman,235,Robin Pecknold,2,Baldwin Electric Harpsichord,7,4,4,94
 118,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Baldwin Electric Harpsichord,7,4,99,21
 190,8,On Another Ocean (January / June),263,Robin Pecknold,2,Baldwin Electric Harpsichord,7,4,92,59
-209,9,Fool’S Errand,288,Robin Pecknold,2,Baldwin Electric Harpsichord,7,4,8,96
+209,9,FoolÕS Errand,288,Robin Pecknold,2,Baldwin Electric Harpsichord,7,4,8,96
 246,11,Crack-Up,384,Robin Pecknold,2,Baldwin Electric Harpsichord,7,4,54,84
+15,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Christian Wargo,1,Bass,8,4,90,88
+165,7,Mearcstapa,250,Christian Wargo,1,Bass,8,4,18,77
+231,10,I Should See Memphis,284,Christian Wargo,1,Bass,8,4,75,85
+243,11,Crack-Up,384,Christian Wargo,1,Bass,8,4,40,24
+173,7,Mearcstapa,250,Casey Wescott,1,Blue Noise Synth,9,4,80,10
+254,11,Crack-Up,384,Casey Wescott,1,Blue Noise Synth,9,4,66,56
+106,4,Kept Woman,235,Skyler Skjelset,1,Bowed Cymbal,10,4,5,58
+256,11,Crack-Up,384,Skyler Skjelset,1,Bowed Cymbal,10,4,57,61
+21,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Cello,11,4,9,59
+34,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Dave Eggar,0,Cello,11,4,91,78
+133,5,Third Of May / Odaigahara,528,Dave Eggar,0,Cello,11,4,87,91
+162,7,Mearcstapa,250,Dave Eggar,0,Cello,11,4,22,49
+194,8,On Another Ocean (January / June),263,Morgan Henderson,1,Cello,11,4,78,77
+230,10,I Should See Memphis,284,Dave Eggar,0,Cello,11,4,6,32
+17,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Chromatic Bells,12,4,94,34
+257,11,Crack-Up,384,Casey Wescott,1,Chromatic Bells,12,4,94,34
+68,2,"Cassius,-",290,Skyler Skjelset,1,Cicada Loop,13,4,40,75
 2,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Classical Guitar,14,4,36,22
 41,2,"Cassius,-",290,Robin Pecknold,2,Classical Guitar,14,4,11,100
 76,3,"Naiads, Cassadies",191,Robin Pecknold,2,Classical Guitar,14,4,46,1
@@ -54,12 +84,14 @@ key,track,Name,trackLength,artist,primary,instrument,instrumemt_num,radius,cordX
 109,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Classical Guitar,14,4,28,77
 138,6,"If You Need To, Keep Time On Me",211,Robin Pecknold,2,Classical Guitar,14,4,42,89
 188,8,On Another Ocean (January / June),263,Robin Pecknold,2,Classical Guitar,14,4,5,33
-207,9,Fool’S Errand,288,Robin Pecknold,2,Classical Guitar,14,4,3,26
+207,9,FoolÕS Errand,288,Robin Pecknold,2,Classical Guitar,14,4,3,26
 225,10,I Should See Memphis,284,Robin Pecknold,2,Classical Guitar,14,4,8,58
 242,11,Crack-Up,384,Robin Pecknold,2,Classical Guitar,14,4,72,82
 12,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Door,15,4,60,43
 193,8,On Another Ocean (January / June),263,Robin Pecknold,2,Door,15,4,60,47
 251,11,Crack-Up,384,Robin Pecknold,2,Door,15,4,3,61
+23,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Double Bass,16,4,80,85
+168,7,Mearcstapa,250,Morgan Henderson,1,Double Bass,16,4,46,70
 3,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Dreadnought,17,4,74,5
 42,2,"Cassius,-",290,Robin Pecknold,2,Dreadnought,17,4,24,50
 100,4,Kept Woman,235,Robin Pecknold,2,Dreadnought,17,4,10,57
@@ -67,36 +99,59 @@ key,track,Name,trackLength,artist,primary,instrument,instrumemt_num,radius,cordX
 145,6,"If You Need To, Keep Time On Me",211,Robin Pecknold,2,Dreadnought,17,4,10,19
 156,7,Mearcstapa,250,Robin Pecknold,2,Dreadnought,17,4,83,64
 182,8,On Another Ocean (January / June),263,Robin Pecknold,2,Dreadnought,17,4,31,63
-206,9,Fool’S Errand,288,Robin Pecknold,2,Dreadnought,17,4,61,64
+206,9,FoolÕS Errand,288,Robin Pecknold,2,Dreadnought,17,4,61,64
 224,10,I Should See Memphis,284,Robin Pecknold,2,Dreadnought,17,4,73,21
 241,11,Crack-Up,384,Robin Pecknold,2,Dreadnought,17,4,97,100
+26,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Matthew Barrick,0,Drum Kit,18,4,81,73
+28,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Neal Morgan,0,Drum Kit,18,4,66,58
+52,2,"Cassius,-",290,Matthew Barrick,0,Drum Kit,18,4,72,79
+81,3,"Naiads, Cassadies",191,Matthew Barrick,0,Drum Kit,18,4,78,59
+123,5,Third Of May / Odaigahara,528,Matthew Barrick,0,Drum Kit,18,4,9,79
+174,7,Mearcstapa,250,Christopher Icasiano,0,Drum Kit,18,4,76,54
+186,8,On Another Ocean (January / June),263,Christopher Icasiano,0,Drum Kit,18,4,89,42
+195,8,On Another Ocean (January / June),263,Neal Morgan,0,Drum Kit,18,4,86,33
+212,9,FoolÕS Errand,288,Matthew Barrick,0,Drum Kit,18,4,18,73
+234,10,I Should See Memphis,284,Christian Wargo,1,Drum Kit,18,4,100,94
+249,11,Crack-Up,384,Christopher Icasiano,0,Drum Kit,18,4,98,67
+13,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Skyler Skjelset,1,Electric Guitar,19,4,48,8
+49,2,"Cassius,-",290,Skyler Skjelset,1,Electric Guitar,19,4,66,45
 58,2,"Cassius,-",290,Robin Pecknold,2,Electric Guitar,19,4,56,36
 87,3,"Naiads, Cassadies",191,Robin Pecknold,2,Electric Guitar,19,4,19,97
 99,4,Kept Woman,235,Robin Pecknold,2,Electric Guitar,19,4,95,71
 116,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Electric Guitar,19,4,18,93
+127,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Electric Guitar,19,4,27,82
 157,7,Mearcstapa,250,Robin Pecknold,2,Electric Guitar,19,4,28,94
 183,8,On Another Ocean (January / June),263,Robin Pecknold,2,Electric Guitar,19,4,96,42
 248,11,Crack-Up,384,Robin Pecknold,2,Electric Guitar,19,4,88,25
 6,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Fender Bass,20,4,72,60
 45,2,"Cassius,-",290,Robin Pecknold,2,Fender Bass,20,4,83,32
+65,2,"Cassius,-",290,Skyler Skjelset,1,Fender Bass,20,4,50,27
 78,3,"Naiads, Cassadies",191,Robin Pecknold,2,Fender Bass,20,4,55,85
 93,4,Kept Woman,235,Robin Pecknold,2,Fender Bass,20,4,28,87
 110,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Fender Bass,20,4,64,53
 139,6,"If You Need To, Keep Time On Me",211,Robin Pecknold,2,Fender Bass,20,4,90,12
 151,7,Mearcstapa,250,Robin Pecknold,2,Fender Bass,20,4,91,19
 177,8,On Another Ocean (January / June),263,Robin Pecknold,2,Fender Bass,20,4,90,5
-201,9,Fool’S Errand,288,Robin Pecknold,2,Fender Bass,20,4,72,99
+201,9,FoolÕS Errand,288,Robin Pecknold,2,Fender Bass,20,4,72,99
 244,11,Crack-Up,384,Robin Pecknold,2,Fender Bass,20,4,68,99
+71,2,"Cassius,-",290,Skyler Skjelset,1,Foley,21,4,70,13
+149,6,"If You Need To, Keep Time On Me",211,Skyler Skjelset,1,Foley,21,4,67,13
 196,8,On Another Ocean (January / June),263,Robin Pecknold,2,Footsteps,22,4,76,61
+197,8,On Another Ocean (January / June),263,Skyler Skjelset,1,Footsteps,22,4,4,33
 252,11,Crack-Up,384,Robin Pecknold,2,Footsteps,22,4,44,6
+69,2,"Cassius,-",290,Skyler Skjelset,1,Glass Harmonica,23,4,78,12
 62,2,"Cassius,-",290,Robin Pecknold,2,Hammond Organ,24,4,58,25
 129,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Hammond Organ,24,4,77,70
 147,6,"If You Need To, Keep Time On Me",211,Robin Pecknold,2,Hammond Organ,24,4,63,15
+172,7,Mearcstapa,250,Casey Wescott,1,Harpsichord,25,4,94,34
+72,2,"Cassius,-",290,Casey Wescott,1,Kettledrum,26,4,94,34
 11,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Korg Drum Machine,27,4,63,65
 48,2,"Cassius,-",290,Robin Pecknold,2,Korg Drum Machine,27,4,31,41
+170,7,Mearcstapa,250,Skyler Skjelset,1,Korg Drum Machine,27,4,18,29
+136,5,Third Of May / Odaigahara,528,Casey Wescott,1,Koto,28,4,94,34
 61,2,"Cassius,-",290,Robin Pecknold,2,Marimba,29,4,5,88
 102,4,Kept Woman,235,Robin Pecknold,2,Marimba,29,4,29,82
-216,9,Fool’S Errand,288,Robin Pecknold,2,Marimba,29,4,52,54
+216,9,FoolÕS Errand,288,Robin Pecknold,2,Marimba,29,4,52,54
 9,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Mellotron,30,4,37,86
 192,8,On Another Ocean (January / June),263,Robin Pecknold,2,Mellotron,30,4,47,46
 233,10,I Should See Memphis,284,Robin Pecknold,2,Memory Man Deluxe,31,4,29,21
@@ -104,156 +159,101 @@ key,track,Name,trackLength,artist,primary,instrument,instrumemt_num,radius,cordX
 47,2,"Cassius,-",290,Robin Pecknold,2,Moog Minitaur,32,4,22,14
 126,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Moog Minitaur,32,4,51,10
 158,7,Mearcstapa,250,Robin Pecknold,2,Moog Minitaur,32,4,28,81
-211,9,Fool’S Errand,288,Robin Pecknold,2,Moog Minitaur,32,4,57,20
+198,8,On Another Ocean (January / June),263,Skyler Skjelset,1,Moog Minitaur,32,4,62,78
+211,9,FoolÕS Errand,288,Robin Pecknold,2,Moog Minitaur,32,4,57,20
 226,10,I Should See Memphis,284,Robin Pecknold,2,Moog Minitaur,32,4,32,66
+67,2,"Cassius,-",290,Skyler Skjelset,1,Pencil On Paper,33,4,41,60
+27,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Matthew Barrick,0,Percussion,34,4,6,71
+29,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Neal Morgan,0,Percussion,34,4,67,45
+53,2,"Cassius,-",290,Matthew Barrick,0,Percussion,34,4,19,68
 64,2,"Cassius,-",290,Robin Pecknold,2,Percussion,34,4,59,19
+82,3,"Naiads, Cassadies",191,Matthew Barrick,0,Percussion,34,4,7,59
 88,3,"Naiads, Cassadies",191,Robin Pecknold,2,Percussion,34,4,99,11
+124,5,Third Of May / Odaigahara,528,Matthew Barrick,0,Percussion,34,4,8,35
 125,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Percussion,34,4,3,5
+135,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Percussion,34,4,72,16
+175,7,Mearcstapa,250,Christopher Icasiano,0,Percussion,34,4,27,99
+187,8,On Another Ocean (January / June),263,Christopher Icasiano,0,Percussion,34,4,24,2
+213,9,FoolÕS Errand,288,Matthew Barrick,0,Percussion,34,4,67,41
 232,10,I Should See Memphis,284,Robin Pecknold,2,Percussion,34,4,78,24
+250,11,Crack-Up,384,Christopher Icasiano,0,Percussion,34,4,32,10
 7,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Piano,35,4,26,80
+16,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Piano,35,4,94,34
 46,2,"Cassius,-",290,Robin Pecknold,2,Piano,35,4,86,17
 79,3,"Naiads, Cassadies",191,Robin Pecknold,2,Piano,35,4,31,14
 94,4,Kept Woman,235,Robin Pecknold,2,Piano,35,4,13,77
+105,4,Kept Woman,235,Skyler Skjelset,1,Piano,35,4,93,23
 111,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Piano,35,4,11,98
 140,6,"If You Need To, Keep Time On Me",211,Robin Pecknold,2,Piano,35,4,14,32
+148,6,"If You Need To, Keep Time On Me",211,Skyler Skjelset,1,Piano,35,4,83,26
 189,8,On Another Ocean (January / June),263,Robin Pecknold,2,Piano,35,4,23,76
-208,9,Fool’S Errand,288,Robin Pecknold,2,Piano,35,4,37,21
+208,9,FoolÕS Errand,288,Robin Pecknold,2,Piano,35,4,37,21
 245,11,Crack-Up,384,Robin Pecknold,2,Piano,35,4,65,83
+24,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Pitched Bass Clarinet,36,4,100,17
+258,11,Crack-Up,384,Morgan Henderson,1,Pitched Bass Clarinet,36,4,36,1
+74,2,"Cassius,-",290,Morgan Henderson,1,Pitched Clarinet,37,4,71,18
+73,2,"Cassius,-",290,Morgan Henderson,1,Pitched Flute,38,4,35,11
 60,2,"Cassius,-",290,Robin Pecknold,2,Prepared Autoharp,39,4,99,5
 128,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Prepared Autoharp,39,4,64,89
-214,9,Fool’S Errand,288,Robin Pecknold,2,Prepared Autoharp,39,4,47,49
-169,7,Mearcstapa,250,Robin Pecknold,2,Synthesizer,46,4,28,24
-185,8,On Another Ocean (January / June),263,Robin Pecknold,2,Synthesizer,46,4,96,13
-10,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Train Loop,47,4,76,31
-90,3,"Naiads, Cassadies",191,Robin Pecknold,2,Varispeed,48,4,91,66
-1,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Vocals,51,4,27,35
-40,2,"Cassius,-",290,Robin Pecknold,2,Vocals,51,4,41,45
-75,3,"Naiads, Cassadies",191,Robin Pecknold,2,Vocals,51,4,86,24
-91,4,Kept Woman,235,Robin Pecknold,2,Vocals,51,4,67,10
-108,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Vocals,51,4,65,84
-137,6,"If You Need To, Keep Time On Me",211,Robin Pecknold,2,Vocals,51,4,100,67
-150,7,Mearcstapa,250,Robin Pecknold,2,Vocals,51,4,51,76
-176,8,On Another Ocean (January / June),263,Robin Pecknold,2,Vocals,51,4,98,74
-200,9,Fool’S Errand,288,Robin Pecknold,2,Vocals,51,4,17,82
-219,10,I Should See Memphis,284,Robin Pecknold,2,Vocals,51,4,98,46
-236,11,Crack-Up,384,Robin Pecknold,2,Vocals,51,4,75,41
-63,2,"Cassius,-",290,Robin Pecknold,2,Water Loop,53,4,9,18
-171,7,Mearcstapa,250,Skyler Skjelset,1,Amplifier Noise,6,4,71,3
-106,4,Kept Woman,235,Skyler Skjelset,1,Bowed Cymbal,10,4,5,58
-256,11,Crack-Up,384,Skyler Skjelset,1,Bowed Cymbal,10,4,57,61
-68,2,"Cassius,-",290,Skyler Skjelset,1,Cicada Loop,13,4,40,75
-13,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Skyler Skjelset,1,Electric Guitar,19,4,48,8
-49,2,"Cassius,-",290,Skyler Skjelset,1,Electric Guitar,19,4,66,45
-127,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Electric Guitar,19,4,27,82
-65,2,"Cassius,-",290,Skyler Skjelset,1,Fender Bass,20,4,50,27
-71,2,"Cassius,-",290,Skyler Skjelset,1,Foley,21,4,70,13
-149,6,"If You Need To, Keep Time On Me",211,Skyler Skjelset,1,Foley,21,4,67,13
-197,8,On Another Ocean (January / June),263,Skyler Skjelset,1,Footsteps,22,4,4,33
-69,2,"Cassius,-",290,Skyler Skjelset,1,Glass Harmonica,23,4,78,12
-170,7,Mearcstapa,250,Skyler Skjelset,1,Korg Drum Machine,27,4,18,29
-198,8,On Another Ocean (January / June),263,Skyler Skjelset,1,Moog Minitaur,32,4,62,78
-67,2,"Cassius,-",290,Skyler Skjelset,1,Pencil On Paper,33,4,41,60
-135,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Percussion,34,4,72,16
-105,4,Kept Woman,235,Skyler Skjelset,1,Piano,35,4,93,23
-148,6,"If You Need To, Keep Time On Me",211,Skyler Skjelset,1,Piano,35,4,83,26
+214,9,FoolÕS Errand,288,Robin Pecknold,2,Prepared Autoharp,39,4,47,49
+20,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Programming,40,4,94,34
+50,2,"Cassius,-",290,Casey Wescott,1,Programming,40,4,94,34
 70,2,"Cassius,-",290,Skyler Skjelset,1,Programming,40,4,84,42
 104,4,Kept Woman,235,Skyler Skjelset,1,Programming,40,4,20,79
 120,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Programming,40,4,43,93
 146,6,"If You Need To, Keep Time On Me",211,Skyler Skjelset,1,Programming,40,4,6,88
+164,7,Mearcstapa,250,Casey Wescott,1,Programming,40,4,42,96
+253,11,Crack-Up,384,Casey Wescott,1,Programming,40,4,20,49
+19,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Qraqebs,41,4,55,38
+22,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Morgan Henderson,1,Qraqebs,41,4,54,10
+166,7,Mearcstapa,250,Casey Wescott,1,Qraqebs,41,4,84,98
+167,7,Mearcstapa,250,Morgan Henderson,1,Qraqebs,41,4,60,33
+199,8,On Another Ocean (January / June),263,Mulatu Astatke,0,Sample,42,4,10,15
 107,4,Kept Woman,235,Skyler Skjelset,1,Shamisen,43,4,50,15
 121,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Shamisen,43,4,42,92
+30,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Brian Mcpherson,0,Spoken Word,44,4,99,79
+18,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Casey Wescott,1,Supercollider Birdsong,45,4,100,99
 66,2,"Cassius,-",290,Skyler Skjelset,1,Synthesizer,46,4,14,84
 103,4,Kept Woman,235,Skyler Skjelset,1,Synthesizer,46,4,73,66
 119,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Synthesizer,46,4,80,40
+169,7,Mearcstapa,250,Robin Pecknold,2,Synthesizer,46,4,28,24
+185,8,On Another Ocean (January / June),263,Robin Pecknold,2,Synthesizer,46,4,96,13
 191,8,On Another Ocean (January / June),263,Skyler Skjelset,1,Synthesizer,46,4,4,79
-210,9,Fool’S Errand,288,Skyler Skjelset,1,Synthesizer,46,4,57,74
-134,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Vocals,51,4,39,83
-215,9,Fool’S Errand,288,Skyler Skjelset,1,Vocals,51,4,40,10
-218,9,Fool’S Errand,288,Skyler Skjelset,1,Water Harp,52,4,73,86
-35,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Andy Clausen,0, Trombone,1,4,62,7
-54,2,"Cassius,-",290,Andy Clausen,0, Trombone,1,4,86,26
-83,3,"Naiads, Cassadies",191,Andy Clausen,0, Trombone,1,4,14,6
-95,4,Kept Woman,235,Andy Clausen,0, Trombone,1,4,22,11
-112,5,Third Of May / Odaigahara,528,Andy Clausen,0, Trombone,1,4,62,37
-141,6,"If You Need To, Keep Time On Me",211,Andy Clausen,0, Trombone,1,4,41,42
-152,7,Mearcstapa,250,Andy Clausen,0, Trombone,1,4,29,38
-178,8,On Another Ocean (January / June),263,Andy Clausen,0, Trombone,1,4,88,68
-202,9,Fool’S Errand,288,Andy Clausen,0, Trombone,1,4,30,67
-220,10,I Should See Memphis,284,Andy Clausen,0, Trombone,1,4,10,28
-237,11,Crack-Up,384,Andy Clausen,0, Trombone,1,4,69,100
-30,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Brian Mcpherson,0,Spoken Word,44,4,99,79
-174,7,Mearcstapa,250,Christopher Icasiano,0,Drum Kit,18,4,76,54
-186,8,On Another Ocean (January / June),263,Christopher Icasiano,0,Drum Kit,18,4,89,42
-249,11,Crack-Up,384,Christopher Icasiano,0,Drum Kit,18,4,98,67
-175,7,Mearcstapa,250,Christopher Icasiano,0,Percussion,34,4,27,99
-187,8,On Another Ocean (January / June),263,Christopher Icasiano,0,Percussion,34,4,24,2
-250,11,Crack-Up,384,Christopher Icasiano,0,Percussion,34,4,32,10
-34,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Dave Eggar,0,Cello,11,4,91,78
-133,5,Third Of May / Odaigahara,528,Dave Eggar,0,Cello,11,4,87,91
-162,7,Mearcstapa,250,Dave Eggar,0,Cello,11,4,22,49
-230,10,I Should See Memphis,284,Dave Eggar,0,Cello,11,4,6,32
-25,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Hannah Epperson,0,Violin,50,4,49,5
-51,2,"Cassius,-",290,Hannah Epperson,0,Violin,50,4,60,97
-80,3,"Naiads, Cassadies",191,Hannah Epperson,0,Violin,50,4,22,12
-122,5,Third Of May / Odaigahara,528,Hannah Epperson,0,Violin,50,4,53,41
-255,11,Crack-Up,384,Hannah Epperson,0,Violin,50,4,5,9
-32,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Jeremy Kittel,0,Violin,50,4,79,2
-131,5,Third Of May / Odaigahara,528,Jeremy Kittel,0,Violin,50,4,53,35
-160,7,Mearcstapa,250,Jeremy Kittel,0,Violin,50,4,30,74
-228,10,I Should See Memphis,284,Jeremy Kittel,0,Violin,50,4,84,96
-26,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Matthew Barrick,0,Drum Kit,18,4,81,73
-52,2,"Cassius,-",290,Matthew Barrick,0,Drum Kit,18,4,72,79
-81,3,"Naiads, Cassadies",191,Matthew Barrick,0,Drum Kit,18,4,78,59
-123,5,Third Of May / Odaigahara,528,Matthew Barrick,0,Drum Kit,18,4,9,79
-212,9,Fool’S Errand,288,Matthew Barrick,0,Drum Kit,18,4,18,73
-27,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Matthew Barrick,0,Percussion,34,4,6,71
-53,2,"Cassius,-",290,Matthew Barrick,0,Percussion,34,4,19,68
-82,3,"Naiads, Cassadies",191,Matthew Barrick,0,Percussion,34,4,7,59
-124,5,Third Of May / Odaigahara,528,Matthew Barrick,0,Percussion,34,4,8,35
-213,9,Fool’S Errand,288,Matthew Barrick,0,Percussion,34,4,67,41
-199,8,On Another Ocean (January / June),263,Mulatu Astatke,0,Sample,42,4,10,15
-28,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Neal Morgan,0,Drum Kit,18,4,66,58
-195,8,On Another Ocean (January / June),263,Neal Morgan,0,Drum Kit,18,4,86,33
-29,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Neal Morgan,0,Percussion,34,4,67,45
+210,9,FoolÕS Errand,288,Skyler Skjelset,1,Synthesizer,46,4,57,74
+10,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Train Loop,47,4,76,31
+90,3,"Naiads, Cassadies",191,Robin Pecknold,2,Varispeed,48,4,91,66
 33,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Nicholas Cords,0,Viola,49,4,59,50
 132,5,Third Of May / Odaigahara,528,Nicholas Cords,0,Viola,49,4,4,34
 161,7,Mearcstapa,250,Nicholas Cords,0,Viola,49,4,22,64
 229,10,I Should See Memphis,284,Nicholas Cords,0,Viola,49,4,92,18
-39,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Pheonix Forte Choir,0,Vocals,51,4,24,96
-38,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Riley Mulherkar,0, Trumpet,2,4,2,90
-57,2,"Cassius,-",290,Riley Mulherkar,0, Trumpet,2,4,76,1
-86,3,"Naiads, Cassadies",191,Riley Mulherkar,0, Trumpet,2,4,83,64
-98,4,Kept Woman,235,Riley Mulherkar,0, Trumpet,2,4,44,68
-115,5,Third Of May / Odaigahara,528,Riley Mulherkar,0, Trumpet,2,4,20,3
-144,6,"If You Need To, Keep Time On Me",211,Riley Mulherkar,0, Trumpet,2,4,55,24
-155,7,Mearcstapa,250,Riley Mulherkar,0, Trumpet,2,4,62,50
-181,8,On Another Ocean (January / June),263,Riley Mulherkar,0, Trumpet,2,4,91,94
-205,9,Fool’S Errand,288,Riley Mulherkar,0, Trumpet,2,4,67,24
-223,10,I Should See Memphis,284,Riley Mulherkar,0, Trumpet,2,4,92,4
-240,11,Crack-Up,384,Riley Mulherkar,0, Trumpet,2,4,7,92
+25,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Hannah Epperson,0,Violin,50,4,49,5
 31,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Russell Durham,0,Violin,50,4,34,49
+32,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Jeremy Kittel,0,Violin,50,4,79,2
+51,2,"Cassius,-",290,Hannah Epperson,0,Violin,50,4,60,97
+80,3,"Naiads, Cassadies",191,Hannah Epperson,0,Violin,50,4,22,12
+122,5,Third Of May / Odaigahara,528,Hannah Epperson,0,Violin,50,4,53,41
 130,5,Third Of May / Odaigahara,528,Russell Durham,0,Violin,50,4,100,36
+131,5,Third Of May / Odaigahara,528,Jeremy Kittel,0,Violin,50,4,53,35
 159,7,Mearcstapa,250,Russell Durham,0,Violin,50,4,96,18
+160,7,Mearcstapa,250,Jeremy Kittel,0,Violin,50,4,30,74
 227,10,I Should See Memphis,284,Russell Durham,0,Violin,50,4,31,27
-36,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Willem De Koch,0, Trombone,1,4,81,56
-55,2,"Cassius,-",290,Willem De Koch,0, Trombone,1,4,29,17
-84,3,"Naiads, Cassadies",191,Willem De Koch,0, Trombone,1,4,16,41
-96,4,Kept Woman,235,Willem De Koch,0, Trombone,1,4,80,13
-113,5,Third Of May / Odaigahara,528,Willem De Koch,0, Trombone,1,4,56,39
-142,6,"If You Need To, Keep Time On Me",211,Willem De Koch,0, Trombone,1,4,5,40
-153,7,Mearcstapa,250,Willem De Koch,0, Trombone,1,4,66,13
-179,8,On Another Ocean (January / June),263,Willem De Koch,0, Trombone,1,4,39,86
-203,9,Fool’S Errand,288,Willem De Koch,0, Trombone,1,4,75,55
-221,10,I Should See Memphis,284,Willem De Koch,0, Trombone,1,4,55,75
-238,11,Crack-Up,384,Willem De Koch,0, Trombone,1,4,78,55
-37,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Zubin Hensler,0, Trumpet,2,4,40,57
-56,2,"Cassius,-",290,Zubin Hensler,0, Trumpet,2,4,85,83
-85,3,"Naiads, Cassadies",191,Zubin Hensler,0, Trumpet,2,4,74,90
-97,4,Kept Woman,235,Zubin Hensler,0, Trumpet,2,4,45,89
-114,5,Third Of May / Odaigahara,528,Zubin Hensler,0, Trumpet,2,4,68,97
-143,6,"If You Need To, Keep Time On Me",211,Zubin Hensler,0, Trumpet,2,4,87,21
-154,7,Mearcstapa,250,Zubin Hensler,0, Trumpet,2,4,38,13
-180,8,On Another Ocean (January / June),263,Zubin Hensler,0, Trumpet,2,4,96,41
-204,9,Fool’S Errand,288,Zubin Hensler,0, Trumpet,2,4,26,44
-222,10,I Should See Memphis,284,Zubin Hensler,0, Trumpet,2,4,69,51
-239,11,Crack-Up,384,Zubin Hensler,0, Trumpet,2,4,27,48
+228,10,I Should See Memphis,284,Jeremy Kittel,0,Violin,50,4,84,96
+255,11,Crack-Up,384,Hannah Epperson,0,Violin,50,4,5,9
+1,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Robin Pecknold,2,Vocals,51,4,27,35
+14,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Christian Wargo,1,Vocals,51,4,29,41
+39,1,I Am All That I Need / Arroyo Seco / Thumbprint Scar,385,Pheonix Forte Choir,0,Vocals,51,4,24,96
+40,2,"Cassius,-",290,Robin Pecknold,2,Vocals,51,4,41,45
+75,3,"Naiads, Cassadies",191,Robin Pecknold,2,Vocals,51,4,86,24
+89,3,"Naiads, Cassadies",191,Christian Wargo,1,Vocals,51,4,67,16
+91,4,Kept Woman,235,Robin Pecknold,2,Vocals,51,4,67,10
+108,5,Third Of May / Odaigahara,528,Robin Pecknold,2,Vocals,51,4,65,84
+134,5,Third Of May / Odaigahara,528,Skyler Skjelset,1,Vocals,51,4,39,83
+137,6,"If You Need To, Keep Time On Me",211,Robin Pecknold,2,Vocals,51,4,100,67
+150,7,Mearcstapa,250,Robin Pecknold,2,Vocals,51,4,51,76
+176,8,On Another Ocean (January / June),263,Robin Pecknold,2,Vocals,51,4,98,74
+200,9,FoolÕS Errand,288,Robin Pecknold,2,Vocals,51,4,17,82
+215,9,FoolÕS Errand,288,Skyler Skjelset,1,Vocals,51,4,40,10
+219,10,I Should See Memphis,284,Robin Pecknold,2,Vocals,51,4,98,46
+236,11,Crack-Up,384,Robin Pecknold,2,Vocals,51,4,75,41
+218,9,FoolÕS Errand,288,Skyler Skjelset,1,Water Harp,52,4,73,86
+63,2,"Cassius,-",290,Robin Pecknold,2,Water Loop,53,4,9,18
